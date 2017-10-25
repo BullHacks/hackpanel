@@ -5,3 +5,19 @@
 body {
     font-family: "Roboto";
   }
+
+  .mdl-layout {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mdl-layout__content {
+    padding: 24px;
+    flex: none;
+  }
+  
+  #loginform {
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+  
