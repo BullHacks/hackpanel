@@ -43,7 +43,8 @@ if(isset($_SESSION['user'])){
 
 <head>
   <title>Login ~ HackPanel</title>
-  <link rel="stylesheet" href="./_css/login.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
 
@@ -57,7 +58,7 @@ if(isset($_SESSION['user'])){
 
         <!-- CARD TITLE START -->
         <div class="mdl-card__title mdl-color--primary">
-          <h2 class="mdl-card__title-text mdl-color-text--white"><img src=""></h2>
+          <h2 class="mdl-card__title-text mdl-color-text--white"><img class="logo" src="./img/bullhackswideborder.png"></h2>
         </div>
         <!-- CARD TITLE END -->
 
