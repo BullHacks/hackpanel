@@ -20,4 +20,10 @@ body {
     margin-bottom: 0px;
     padding: 0px;
   }
-  
+
+
+  .logo {
+    max-height: inherit;
+    max-width: 100%;
+    align-content: center;
+  }
