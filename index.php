@@ -10,11 +10,11 @@ $err = "";
 if($_SERVER['REQUEST_METHOD'] == "POST"){
 
   //escape the username and password fields - avoids SQL injection
-  $user = mysqli_real_escape_string($conn,$_POST['user']);
+  $email = mysqli_real_escape_string($conn,$_POST['email']);
   $pass = mysqli_real_escape_string($conn,$_POST['pass']);
 
   //Run a query to find the row where username and password matches
-  $qry = "SELECT * FROM users WHERE username='$user' and password='$pass'";
+  $qry = "SELECT * FROM users WHERE email='$email' and password='$pass'";
   $sql = mysqli_query($conn,$qry);
 
   //Count the number of rows
@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 if($numrows == 1){
 
   //Set the session username to username variable and redirect to home page
-  $_SESSION['user'] = $user;
+  $_SESSION['email'] = $email;
   header('location:./home.php');
 
 //If not, set the error message to display on the form
@@ -33,7 +33,7 @@ if($numrows == 1){
 }
 }
 
-if(isset($_SESSION['user'])){
+if(isset($_SESSION['email'])){
   header('location:./home.php');
 }
 ?>
@@ -70,8 +70,8 @@ if(isset($_SESSION['user'])){
 
           <?php if($err == "") { ?>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" id="user" name="user">
-              <label class="mdl-textfield__label" for="user">Username</label>
+              <input class="mdl-textfield__input" type="text" id="email" name="email">
+              <label class="mdl-textfield__label" for="email">Email Address</label>
             </div>
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -82,8 +82,8 @@ if(isset($_SESSION['user'])){
           <?php }else{ ?>
 
             <div class="mdl-textfield is-invalid mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" id="user" name="user">
-              <label class="mdl-textfield__label" for="user">Username</label>
+              <input class="mdl-textfield__input" type="text" id="email" name="email">
+              <label class="mdl-textfield__label" for="email">Email Address</label>
             </div>
 
             <div class="mdl-textfield is-invalid mdl-js-textfield mdl-textfield--floating-label">
