@@ -1,10 +1,10 @@
 <?php
 
 //SET VARIABLES
-$dbuser = "bullhacksadmin";
+$dbuser = "";
 $dbpass = "";
-$dbdatabase = "bullhacks_hackpanel";
-$dbserver = "bullhacks2.cgdworlghjvy.eu-west-2.rds.amazonaws.com";
+$dbdatabase = "";
+$dbserver = "";
 
 //CONNECT TO DB
 $conn = mysqli_connect($dbserver, $dbuser, $dbpass, $dbdatabase);
