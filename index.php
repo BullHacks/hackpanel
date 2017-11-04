@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
   //escape the username and password fields - avoids SQL injection
   $email = mysqli_real_escape_string($conn,$_POST['email']);
-  $pass = mysqli_real_escape_string($conn,$_POST['pass']);
+  $pass = mysqli_real_escape_string($conn,$_POST['password']);
 
   //Run a query to find the row where username and password matches
   $qry = "SELECT * FROM users WHERE email='$email' and password='$pass'";
@@ -76,7 +76,7 @@ if(isset($_SESSION['email'])){
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
               <input class="mdl-textfield__input" type="password" id="password" name="password">
-              <label class="mdl-textfield__label" for="pass">Password</label>
+              <label class="mdl-textfield__label" for="password">Password</label>
             </div>
 
           <?php }else{ ?>
