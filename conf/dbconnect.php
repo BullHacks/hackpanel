@@ -4,7 +4,7 @@
 $dbuser = "";
 $dbpass = "";
 $dbdatabase = "";
-$dbserver = "";
+$dbserver = "localhost";
 
 //CONNECT TO DB
 $conn = mysqli_connect($dbserver, $dbuser, $dbpass, $dbdatabase);

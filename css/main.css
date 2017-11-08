@@ -5,3 +5,7 @@
 body {
     font-family: "Roboto";
 }
+
+body .mdl-layout__drawer {
+    padding-top: 30px;
+}
