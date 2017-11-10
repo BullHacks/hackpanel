@@ -30,7 +30,7 @@ require('./conf/sescheck.php');
 					</button>
 
 					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-    					for="demo-menu-lower-right">
+    					for="menu-lower-right">
 						<li class="mdl-menu__item"><a style="text-decoration:none; color:black;" href="logout.php">Log Out</a></li>
 						<li class="mdl-menu__item"><a style="text-decoration:none; color:black;" href="settings.php">Settings</a></li>
 						<li class="mdl-menu__item"><a style="text-decoration:none; color:black;" href="https://airtable.com/shrCr68AzwBT4XyQD" target="_blank">Found a Bug?</a></li>
