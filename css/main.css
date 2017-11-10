@@ -6,14 +6,15 @@ body {
     font-family: "Roboto";
 }
 
-body .section-heading {
+.section-heading {
 	padding-left: 20px;
 }
 
-body .material-icons {
-	padding-top: 12px;
+.mdl-data-table {
+	margin-top: 25px;
+	margin-left: 25px;
 }
 
-body #demo-menu-lower-right {
-	padding-bottom: 12px;
+.mdl-layout__drawer-button {
+	padding-top: 12px;
 }
