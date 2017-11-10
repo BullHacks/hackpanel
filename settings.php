@@ -8,7 +8,7 @@ require('./conf/sescheck.php');
 
 <html>
     <head>
-        <title>Home ~ HackPanel</title>
+        <title>Settings ~ HackPanel</title>
         <link rel="stylesheet" href="./css/main.css">
         <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -38,7 +38,6 @@ require('./conf/sescheck.php');
                 </nav>
             </div>
         </header>
-		
         <div id="sidebar" class="mdl-layout__drawer">
             <span class="mdl-layout-title">HackPanel</span>
             <nav class="mdl-navigation">
@@ -49,11 +48,6 @@ require('./conf/sescheck.php');
                 <!-- <a class="mdl-navigation__link" href="./otherstuff.php">Other Stuff</a> -->
             </nav>
         </div>
-		
-		<div class="section-heading"><h3 style="text-align: left;">Announcements</h3></div>
-		<div class="mdl-cell mdl-cell--12-col">[INSERT RSS FEED HERE]</div>
-		
     	</div>
     </body>
 </html>
-

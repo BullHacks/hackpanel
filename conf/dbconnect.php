@@ -1,9 +1,9 @@
 <?php
 
 //SET VARIABLES
-$dbuser = "";
-$dbpass = "";
-$dbdatabase = "";
+$dbuser = "hackpaneladmin";
+$dbpass = "3XK%&xmW5bTymlDwcT1L";
+$dbdatabase = "bullhacks_hackpanel";
 $dbserver = "localhost";
 
 //CONNECT TO DB

@@ -1,15 +1,42 @@
 <?php
-
 //include both the dbconnect and sescheck files
 require('./conf/dbconnect.php');
 require('./conf/sescheck.php');
 
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://api.airtable.com/v0/appxK235pwGiNXlk7/Attendees?maxRecords=100&view=Grid%20view",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "authorization: Bearer keyG31qdHfQ6RTJp4",
+    "cache-control: no-cache",
+    "postman-token: 59323f88-7e62-1edd-942e-cb60658639cb"
+  ),
+));
+
+$response = curl_exec($curl);
+$records = $response['records'];
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $records;
+}
 ?>
 
 <html>
     <head>
-        <title>Home ~ HackPanel</title>
-        <link rel="stylesheet" href="./css/main.css">
+        <title>Attendees ~ HackPanel</title>
+        <link rel="stylesheet" href="./css/attendees.css">
         <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     </head>
@@ -38,7 +65,6 @@ require('./conf/sescheck.php');
                 </nav>
             </div>
         </header>
-		
         <div id="sidebar" class="mdl-layout__drawer">
             <span class="mdl-layout-title">HackPanel</span>
             <nav class="mdl-navigation">
@@ -50,10 +76,26 @@ require('./conf/sescheck.php');
             </nav>
         </div>
 		
-		<div class="section-heading"><h3 style="text-align: left;">Announcements</h3></div>
-		<div class="mdl-cell mdl-cell--12-col">[INSERT RSS FEED HERE]</div>
-		
+		<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+  			<thead>
+    			<tr>
+      				<th class="mdl-data-table__cell--non-numeric">First Name</th>
+      				<th class="mdl-data-table__cell--non-numeric">Surname</th>
+      				<th class="mdl-data-table__cell--non-numeric">Email Address</th>
+					<th class="mdl-data-table__cell--non-numeric">HackPanel Role</th>
+					<th class="mdl-data-table__cell--non-numeric">University</th>
+    			</tr>
+  			</thead>
+  			<tbody>
+    			<tr>
+					<td class="mdl-data-table__cell--non-numeric"><?php echo($response['first_name']); ?></td>
+					<td class="mdl-data-table__cell--non-numeric">User</td>
+					<td class="mdl-data-table__cell--non-numeric">hacs@bullhacks.tech</td>
+					<td>3</td>
+					<td class="mdl-data-table__cell--non-numeric">Birmingham City University</td>
+				</tr>
+  			</tbody>
+		</table>	
     	</div>
     </body>
 </html>
-

@@ -1,5 +1,5 @@
 <?php
-//Start a session and include the confic for connecting to the database
+//Start a session and include the config for connecting to the database
 session_start();
 include('./conf/dbconnect.php');
 
