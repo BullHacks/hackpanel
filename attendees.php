@@ -36,7 +36,7 @@ if ($err) {
 <html>
     <head>
         <title>Attendees ~ HackPanel</title>
-        <link rel="stylesheet" href="./css/attendees.css">
+        <link rel="stylesheet" href="./css/main.css">
         <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     </head>

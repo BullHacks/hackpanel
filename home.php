@@ -25,7 +25,7 @@ require('./conf/sescheck.php');
 						<button id="btnLogout" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Log Out</button>
 					</form> -->
 					<!-- Right aligned menu below button -->
-					<button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+					<button id="menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
   						<i class="material-icons">more_vert</i>
 					</button>
 
@@ -39,7 +39,7 @@ require('./conf/sescheck.php');
             </div>
         </header>
 		
-        <div id="sidebar" class="mdl-layout__drawer">
+        <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">HackPanel</span>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="./home.php">Home</a>
