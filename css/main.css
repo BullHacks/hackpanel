@@ -18,3 +18,11 @@ body {
 .mdl-layout__drawer-button {
 	padding-top: 12px;
 }
+
+.logo {
+    max-height: inherit;
+    max-width: 100%;
+	align-content: center;
+	padding-top: 12px;
+	padding-right: 40px;
+  }
