@@ -108,7 +108,7 @@ if(isset($_SESSION['email'])){
                 <!-- ACTIONS CARD START -->
                 <div class="mdl-card__actions mdl-card--border">
                   <input class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" type="submit" value="Log In">
-                  <input class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary floatright" type="submit" formaction="./register.php" value="Register">
+                  <input class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary floatright" type="submit" formaction="./register.php" value="Lol">
                 </div>
                 <!-- ACTIONS CARD END -->
 
