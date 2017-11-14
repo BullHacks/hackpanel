@@ -5,7 +5,6 @@ require('./conf/sescheck.php');
 
 $qry = 'SELECT * FROM users';
 $sql = mysqli_query($conn, $qry) or die("Error connecting to database.");
-// $row = mysqli_fetch_assoc($sql);
 ?>
 
 <html>
@@ -50,8 +49,9 @@ $sql = mysqli_query($conn, $qry) or die("Error connecting to database.");
                 <!-- <a class="mdl-navigation__link" href="./otherstuff.php">Other Stuff</a> -->
             </nav>
         </div>
-		
-		<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+        
+        <div class="section-heading"><h3 style="text-align: left;">Attendees</h3></div>
+		<table id="tblAttendees" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
   			<thead>
     			<tr>
       				<th class="mdl-data-table__cell--non-numeric">First Name</th>
@@ -77,7 +77,6 @@ $sql = mysqli_query($conn, $qry) or die("Error connecting to database.");
                 <?php } ?>
   			</tbody>
 		</table>	
-        // <?php echo($row); ?>
     	</div>
     </body>
 </html>

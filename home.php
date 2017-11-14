@@ -51,7 +51,7 @@ require('./conf/sescheck.php');
             </nav>
         </div>
 		
-		<div class="section-heading"><h3 style="text-align: left;">Announcements</h3></div>
+		<div class="section-heading"><h3>Announcements</h3></div>
 		<div class="mdl-cell mdl-cell--12-col">[INSERT RSS FEED HERE]</div>
 		
     	</div>

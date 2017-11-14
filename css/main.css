@@ -10,6 +10,10 @@ body {
 	padding-left: 20px;
 }
 
+.section-heading h3 {
+	text-align: left;
+}
+
 .mdl-data-table {
 	margin-top: 25px;
 	margin-left: 25px;
@@ -26,3 +30,9 @@ body {
 	padding-top: 12px;
 	padding-right: 40px;
   }
+
+#tblAttendees {
+	margin-top: 0%;
+	margin-right: auto;
+	width: 95%;
+}
