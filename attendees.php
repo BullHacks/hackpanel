@@ -68,7 +68,7 @@ $sql = mysqli_query($conn, $qry) or die("Error connecting to database.");
                     while($row = mysqli_fetch_assoc($sql)) {?>
                         <tr>
                             <td class="mdl-data-table__cell--non-numeric"><?php echo($row['first_name']); ?></td>
-                            <td class="mdl-data-table__cell--non-numeric"><?php echo($row['surname']); ?></td>
+                            <td class="mdl-data-table__cell--non-numeric"><?php echo($row['last_name']); ?></td>
                             <td class="mdl-data-table__cell--non-numeric"><?php echo($row['email']); ?></td>
                             <td class="mdl-data-table__cell--non-numeric"><?php echo($row['university']); ?></td>
                             <td class="mdl-data-table__cell--non-numeric"><?php echo($row['github']); ?></td>
