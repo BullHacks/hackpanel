@@ -77,6 +77,7 @@ $row = mysqli_fetch_assoc($sql);
                 <?php } ?>
   			</tbody>
 		</table>	
+        <?php echo($row); ?>
     	</div>
     </body>
 </html>
