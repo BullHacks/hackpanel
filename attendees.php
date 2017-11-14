@@ -5,7 +5,7 @@ require('./conf/sescheck.php');
 
 $qry = 'SELECT * FROM users';
 $sql = mysqli_query($conn, $qry) or die("Error connecting to database.");
-$row = mysqli_fetch_assoc($sql);
+// $row = mysqli_fetch_assoc($sql);
 ?>
 
 <html>
@@ -65,7 +65,7 @@ $row = mysqli_fetch_assoc($sql);
   			<tbody>
     			<!-- For each user record, create row and import data -->
                 <?php
-                    while($row = mysqli_fetch_assoc($row)) {?>
+                    while($row = mysqli_fetch_assoc($sql)) {?>
                         <tr>
                             <td class="mdl-data-table__cell--non-numeric"><?php echo($row['first_name']); ?></td>
                             <td class="mdl-data-table__cell--non-numeric"><?php echo($row['surname']); ?></td>
@@ -77,7 +77,7 @@ $row = mysqli_fetch_assoc($sql);
                 <?php } ?>
   			</tbody>
 		</table>	
-        <?php echo($row); ?>
+        // <?php echo($row); ?>
     	</div>
     </body>
 </html>
