@@ -53,7 +53,6 @@ require('./conf/sescheck.php');
       				<th class="mdl-data-table__cell--non-numeric">First Name</th>
       				<th class="mdl-data-table__cell--non-numeric">Surname</th>
       				<th class="mdl-data-table__cell--non-numeric">Email Address</th>
-					<th class="mdl-data-table__cell--non-numeric">HackPanel Role</th>
 					<th class="mdl-data-table__cell--non-numeric">University</th>
     			</tr>
   			</thead>
