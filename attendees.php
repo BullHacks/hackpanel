@@ -2,6 +2,10 @@
 //include both the dbconnect and sescheck files
 require('./conf/dbconnect.php');
 require('./conf/sescheck.php');
+
+$qry = 'SELECT * FROM users';
+$sql = mysqli_query($conn, $qry) or die("Error connecting to database.");
+$row = mysqli_fetch_assoc($sql);
 ?>
 
 <html>
@@ -54,10 +58,23 @@ require('./conf/sescheck.php');
       				<th class="mdl-data-table__cell--non-numeric">Surname</th>
       				<th class="mdl-data-table__cell--non-numeric">Email Address</th>
 					<th class="mdl-data-table__cell--non-numeric">University</th>
+                    <th class="mdl-data-table__cell--non-numeric">GitHub</th>
+                    <th class="mdl-data-table__cell--non-numeric">Discord</th>
     			</tr>
   			</thead>
   			<tbody>
     			<!-- For each user record, create row and import data -->
+                <?php
+                    while($row = mysqli_fetch_assoc($row)) {?>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric"><?php echo($row['first_name']); ?></td>
+                            <td class="mdl-data-table__cell--non-numeric"><?php echo($row['surname']); ?></td>
+                            <td class="mdl-data-table__cell--non-numeric"><?php echo($row['email']); ?></td>
+                            <td class="mdl-data-table__cell--non-numeric"><?php echo($row['university']); ?></td>
+                            <td class="mdl-data-table__cell--non-numeric"><?php echo($row['github']); ?></td>
+                            <td class="mdl-data-table__cell--non-numeric"><?php echo($row['discord']); ?></td>
+                        </tr>
+                <?php } ?>
   			</tbody>
 		</table>	
     	</div>
