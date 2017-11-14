@@ -2,35 +2,6 @@
 //include both the dbconnect and sescheck files
 require('./conf/dbconnect.php');
 require('./conf/sescheck.php');
-
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.airtable.com/v0/appxK235pwGiNXlk7/Attendees?maxRecords=100&view=Grid%20view",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_HTTPHEADER => array(
-    "authorization: Bearer keyG31qdHfQ6RTJp4",
-    "cache-control: no-cache",
-    "postman-token: 59323f88-7e62-1edd-942e-cb60658639cb"
-  ),
-));
-
-$response = curl_exec($curl);
-$records = $response['records'];
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-  echo $records;
-}
 ?>
 
 <html>
@@ -87,13 +58,7 @@ if ($err) {
     			</tr>
   			</thead>
   			<tbody>
-    			<tr>
-					<td class="mdl-data-table__cell--non-numeric"><?php echo($response['first_name']); ?></td>
-					<td class="mdl-data-table__cell--non-numeric">User</td>
-					<td class="mdl-data-table__cell--non-numeric">hacs@bullhacks.tech</td>
-					<td>3</td>
-					<td class="mdl-data-table__cell--non-numeric">Birmingham City University</td>
-				</tr>
+    			<!-- For each user record, create row and import data -->
   			</tbody>
 		</table>	
     	</div>
